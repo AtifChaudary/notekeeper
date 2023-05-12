@@ -9,7 +9,7 @@
 To install virtualenv via pip run:
 
 ```bash
-pip3 install virtualenv
+pip install virtualenv
 ```
 
 ##### Usage
@@ -35,5 +35,12 @@ deactivate
 Run Server:
 
 ```bash
-python3 manage.py runserver
+python manage.py runserver
+```
+
+
+Run Test Cases:
+
+```bash
+python manage.py test
 ```
