@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="au theme template">
+  <meta name="author" content="Hau Nguyen">
+  <meta name="keywords" content="au theme template">
+
+  <!-- Title Page-->
+  <title>Note Keeper :: Dashboard</title>
+
+  <!-- Fontfaces CSS-->
+  <link href="/static/assets/css/font-face.css" rel="stylesheet" media="all">
+  <link href="/static/assets/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+  <link href="/static/assets/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+  <link href="/static/assets/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+  <link rel="icon" type="image/x-icon" href="https://img.icons8.com/clouds/1000/null/globe--v1.png">
+
+  <!-- Bootstrap CSS-->
+  <link href="/static/assets/vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+  <!-- Vendor CSS-->
+  <link href="/static/assets/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+  <link href="/static/assets/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet"
+    media="all">
+  <link href="/static/assets/vendor/wow/animate.css" rel="stylesheet" media="all">
+  <link href="/static/assets/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+  <link href="/static/assets/vendor/slick/slick.css" rel="stylesheet" media="all">
+  <link href="/static/assets/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+  <link href="/static/assets/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" rel="stylesheet"
+    media="all">
+
+  <link href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" media="all">
+
+  <!-- Main CSS-->
+  <link href="/static/assets/css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+  <div class="page-wrapper">
+    <!-- HEADER DESKTOP-->
+    <header class="header-desktop3 d-none d-lg-block">
+      <div class="section__content section__content--p35">
+        <div class="header3-wrap">
+          <div class="header__logo">
+            <a style="color:white;" href="/dashboard">
+              DIGITHAI Software Group
+            </a>
+          </div>
+          <div class="header__navbar">
+            <ul class="list-unstyled">
+              <li class="notes">
+                <a href="/dashboard">
+                  <i class="fas fa-tachometer-alt"></i>
+                  <span class="bot-line"></span>Notes</a>
+              </li>
+
+              <li>
+                <a href="{% url 'logout' %}">
+                  <i class="fas fa-user"></i>
+                  <span class="bot-line"></span>Logout</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__tool">
+            <div class="account-wrap">
+              <div class="account-item account-item--style2 clearfix js-item-menu">
+                <div class="image">
+                  <img src="/static/assets/images/icon/avatar-01.jpg" alt="John Doe" />
+                </div>
+                <div class="content">
+                  <a class="js-acc-btn" href="#">{{ user.first_name }}</a>
+                </div>
+                <div class="account-dropdown js-dropdown">
+                  <div class="info clearfix">
+                    <div class="image">
+                      <p>
+                        <img src="/static/assets/images/icon/avatar-01.jpg" alt="John Doe" />
+                      </p>
+                    </div>
+                    <div class="content">
+                      <h5 class="name">
+                        <p>{{ user.first_name }} {{ user.last_name }}</p>
+                      </h5>
+                      <span class="email">{{ user.email }}</span>
+                    </div>
+                  </div>
+                  <div class="account-dropdown__footer">
+                    <a href="{% url 'logout' %}">
+                      <i class="zmdi zmdi-power"></i>Logout</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER DESKTOP-->
+
+    <!-- HEADER MOBILE-->
+    <header class="header-mobile header-mobile-2 d-block d-lg-none">
+      <div class="header-mobile__bar">
+        <div class="container-fluid">
+          <div class="header-mobile-inner">
+            <a class="logo" href="/dashboard" style="color:white;">
+              DIGITHAI Software Group
+            </a>
+            <button class="hamburger hamburger--slider" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar-mobile">
+        <div class="container-fluid">
+          <ul class="navbar-mobile__list list-unstyled">
+
+            <li class="notes">
+              <a href="/dashboard">
+                <i class="fas fa-tachometer-alt"></i>
+                <span class="bot-line"></span>Notes</a>
+            </li>
+
+            <li>
+              <a href="{% url 'logout' %}">
+                <i class="fas fa-user"></i>
+                <span class="bot-line"></span>Logout</a>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="sub-header-mobile-2 d-block d-lg-none">
+      <div class="header__tool">
+        <div class="account-wrap">
+          <div class="account-item account-item--style2 clearfix js-item-menu">
+            <div class="image">
+              <img src="/static/assets/images/icon/avatar-01.jpg" alt="John Doe" />
+            </div>
+            <div class="content">
+              <a class="js-acc-btn" href="#">{{ user.first_name }}</a>
+            </div>
+            <div class="account-dropdown js-dropdown">
+              <div class="info clearfix">
+                <div class="image">
+                  <a href="#">
+                    <img src="/static/assets/images/icon/avatar-01.jpg" alt="John Doe" />
+                  </a>
+                </div>
+                <div class="content">
+                  <h5 class="name">
+                    <p>{{ user.first_name }} {{ user.last_name }}</p>
+                  </h5>
+                  <span class="email">{{ user.email }}</span>
+                </div>
+              </div>
+              <div class="account-dropdown__footer">
+                <a href="{% url 'logout' %}">
+                  <i class="zmdi zmdi-power"></i>Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END HEADER MOBILE -->
+
+
+    <!-- PAGE CONTENT-->
+    <div class="page-content--bgf7">
+      <!-- BREADCRUMB-->
+      <section class="au-breadcrumb2">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="au-breadcrumb-content">
+                <div class="au-breadcrumb-left">
+                  <span class="au-breadcrumb-span">You are here:</span>
+                  <ul class="list-unstyled list-inline au-breadcrumb__list">
+                    <li class="list-inline-item seprate">
+                      <span>/</span>
+                    </li>
+                    <li class="list-inline-item">Notes</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END BREADCRUMB-->
+
+      <!-- WELCOME-->
+      <section class="welcome p-t-10">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="title-4">Welcome back
+                <span>{{ user.first_name }} {{user.last_name}}!</span>
+              </h1>
+              <hr class="line-seprate">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END WELCOME-->
+
+      <!-- DATA TABLE-->
+      <section class="p-t-20">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              {% if messages %} {% for message in messages %}
+              <div class="alert alert-{{ message.tags }} mt-3" role="alert" style="font-weight: bold;">
+                {{ message }}
+              </div>
+              {% endfor %} {% endif %}
+              <h3 class="title-5 m-b-35">Notes <a href="#" style="float: right;" data-toggle="modal"
+                  data-target="#staticModalAdd">Add New</a></h3>
+              <div class="table-responsive table-responsive-data2">
+                <table class="table table-data2 display" id="example">
+                  <thead>
+                    <tr>
+                      <th>name</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for note in notes %}
+                    <tr>
+                      <td>{{note.title}}</td>
+                      <td>
+                        <a style="font-size: 20px; margin-right: 15px;" href="#" class="item" data-placement="top" title="View" data-toggle="modal" data-target="#staticModalView-{{note.id}}">
+                          <i class="zmdi zmdi-eye"></i>
+                        </a>
+                        <a style="font-size: 20px; margin-right: 15px;" href="#" class="item" data-placement="top"
+                          title="Edit" data-toggle="modal" data-target="#staticModalEdit-{{note.id}}">
+                          <i class="zmdi zmdi-edit"></i>
+                        </a>
+                        <a style="font-size: 20px; color: red;" class="item" data-placement="top" title="Delete"
+                          data-toggle="modal" data-target="#staticModal-{{note.id}}">
+                          <i class="zmdi zmdi-delete"></i>
+                        </a>
+                      </td>
+                    </tr>
+
+                    <!-- modal static -->
+                    <div class="modal fade" id="staticModal-{{note.id}}" tabindex="-1" role="dialog"
+                      aria-labelledby="staticModalLabel" aria-hidden="true" data-backdrop="static">
+                      <div class="modal-dialog modal-sm" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="staticModalLabel">Confirmation</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>
+                              Are you sure you want to delete <b>{{note.title}}</b>?
+                            </p>
+                          </div>
+                          <div class="modal-footer">
+                            <a type="button" class="btn btn-danger" data-dismiss="modal" style="color: white;">No</a>
+                            <a href="/notes/delete-{{note.id}}/" type="button" class="btn btn-success"
+                              style="color: white;">Yes</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end modal static -->
+
+                    <div class="modal fade" id="staticModalView-{{note.id}}" tabindex="-1" role="dialog"
+                      aria-labelledby="staticModalLabel" aria-hidden="true" data-backdrop="static">
+                      <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="staticModalLabel">View Note</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p><b>Title:</b> {{note.title}}</p>
+                            <p><b>Content:</b> {{note.content}}</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                          </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="modal fade" id="staticModalEdit-{{note.id}}" tabindex="-1" role="dialog"
+                      aria-labelledby="staticModalLabel" aria-hidden="true" data-backdrop="static">
+                      <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="staticModalLabel">Edit Note</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <form method="post" action="/notes/edit-{{note.id}}/">
+                              {% csrf_token %}
+                              <div class="form-group">
+                                <label for="edit_name">Title</label>
+                                <input type="text" class="form-control" id="edit_title" name="edit_title"
+                                  value="{{note.title}}" required>
+                              </div>
+                              <div class="form-group">
+                                <label for="edit_users">Content</label>
+                                <textarea class="form-control" id="edit_content" name="edit_content" rows="4" cols="50"
+                                  required>{{note.content}}</textarea>
+                              </div>
+
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Update</button>
+                          </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END DATA TABLE-->
+
+      <div class="modal fade" id="staticModalAdd" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel"
+        aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticModalLabel">Add Note</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form method="post" action="/notes/add/">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="name">Title</label>
+                  <input type="text" class="form-control" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                  <label for="users">Content</label>
+                  <textarea class="form-control" id="content" name="content" rows="4" cols="50" required></textarea>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary">Add</button>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- COPYRIGHT-->
+      <section class="p-t-60 p-b-20">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="copyright">
+                <p>Copyright © 2023<a href="/dashboard">&nbsp; DIGITHAI Software Group</a>. All rights reserved.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END COPYRIGHT-->
+    </div>
+
+  </div>
+
+  <!-- Jquery JS-->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <!-- Bootstrap JS-->
+  <script src="/static/assets/vendor/bootstrap-4.1/popper.min.js"></script>
+  <script src="/static/assets/vendor/bootstrap-4.1/bootstrap.min.js"></script>
+  <!-- Vendor JS       -->
+  <script src="/static/assets/vendor/slick/slick.min.js">
+  </script>
+  <script src="/static/assets/vendor/wow/wow.min.js"></script>
+  <script src="/static/assets/vendor/animsition/animsition.min.js"></script>
+  <script src="/static/assets/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+  </script>
+  <script src="/static/assets/vendor/counter-up/jquery.waypoints.min.js"></script>
+  <script src="/static/assets/vendor/counter-up/jquery.counterup.min.js">
+  </script>
+  <script src="/static/assets/vendor/circle-progress/circle-progress.min.js"></script>
+  <script src="/static/assets/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+  <script src="/static/assets/vendor/chartjs/Chart.bundle.min.js"></script>
+  <script src="/static/assets/vendor/select2/select2.min.js">
+  </script>
+  <!-- Main JS-->
+  <script src="/static/assets/js/main.js"></script>
+
+
+  <script>
+    $(".notes").addClass("active");
+
+    $(document).ready(function () {
+      $('#example').DataTable();
+    });
+  </script>
+</body>
+
+</html>
+<!-- end document-->

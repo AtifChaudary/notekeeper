@@ -1,0 +1,436 @@
+.clr-orange {
+    color: #c83220;
+    ;
+  }
+
+  .e-sign-header {
+    padding: 40px 35px;
+  }
+
+  .e-sign-header .job-location {
+    text-align: right;
+  }
+
+  .e-sign-header .job-location span.estimate-type {
+    margin-right: 10px;
+  }
+
+  .e-sign-header .job-location ul {
+    display: inline-block;
+  }
+
+  .e-sign-header .job-location ul li {
+    display: inline-block;
+    padding: 0 15px;
+  }
+
+  .e-sign-header .job-location ul li i {
+    margin-right: 15px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    .e-sign-header .job-location {
+      text-align: left;
+    }
+
+    .e-sign-header .job-location ul li {
+      font-size: 13px;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .e-sign-header .header-logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .e-sign-header .job-location {
+      text-align: center;
+    }
+
+    .e-sign-header .job-location ul li {
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .e-sign-header {
+      padding: 25px 0;
+    }
+
+    .e-sign-header .header-logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .e-sign-header .job-location {
+      text-align: left;
+    }
+
+    .e-sign-header .job-location ul li:first-child {
+      padding-left: 0;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .e-sign-header {
+      padding: 25px 0;
+    }
+
+    .e-sign-header .header-logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .e-sign-header .job-location {
+      text-align: left;
+    }
+
+    .e-sign-header .job-location span {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .e-sign-header .job-location ul li {
+      padding: 0;
+      font-size: 12px;
+    }
+  }
+
+  .e-sign-footer {
+    padding: 40px 50px;
+  }
+
+  .e-sign-footer small {
+    vertical-align: bottom;
+  }
+
+  @media screen and (max-width: 576px) {
+    .e-sign-footer {
+      padding: 25px 0;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .e-sign-footer {
+      padding: 25px 0;
+      text-align: center;
+    }
+
+  }
+
+  .login-page-header,
+  .login-page-content,
+  .login-page-footer {
+    padding: 50px 80px;
+  }
+
+  .login-page-body {
+    position: relative;
+  }
+
+  .login-page-body .login-page-content-wrapper {
+    height: calc(100% - 150px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .login-page-body .login-page-content-wrapper .login-page-content .login-form-header h6,
+  .login-page-body .login-page-content-wrapper .login-page-content .login-form-header p {
+    font-size: 20px;
+  }
+
+  .login-page-body .login-page-content-wrapper .login-page-content .email-login h1,
+  .login-page-body .login-page-content-wrapper .login-page-content .pin-login h1 {
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 38px;
+  }
+
+  .login-page-body .login-page-content-wrapper .login-page-content .email-login form i,
+  .login-page-body .login-page-content-wrapper .login-page-content .pin-login form i {
+    font-size: 25px;
+    margin-left: 10px;
+  }
+
+  .login-page-body .login-page-content-wrapper .login-page-content .pin-login p {
+    font-size: 20px;
+  }
+
+  .login-page-body .login-page-content-wrapper .login-page-footer a:hover {
+    color: #272727;
+  }
+
+  .login-right-img {
+    position: relative;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .login-right-img:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1px;
+    right: 80%;
+    background-color: #fff;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  }
+
+  @media screen and (max-width: 1200px) {
+    .login-page-header {
+      text-align: center;
+    }
+
+    .login-right-img {
+      display: none;
+    }
+
+  }
+
+  @media screen and (max-width: 576px) {
+    .login-page-body .login-page-content-wrapper .login-page-content {
+      padding: 20px 15px;
+    }
+
+    .login-page-body .login-page-content-wrapper .login-page-content .login-form-header {
+      text-align: center;
+    }
+
+    .login-page-body .login-page-content-wrapper .login-page-content .email-login h1,
+    .login-page-body .login-page-content-wrapper .login-page-content .pin-login h1 {
+      font-size: 30px;
+      text-align: center;
+    }
+
+
+
+  }
+
+  .btn-back-arrow {
+    display: inline-block;
+    color: #d18808;
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .btn-back-arrow :hover {
+    color: #d18808;
+  }
+
+  .btn-primary-odie {
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    padding: 14px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .btn-primary-odie:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .btn-primary-odie {
+    display: inline-block;
+    color: white;
+    background-color: #c83220;
+    font-size: 16px;
+    padding: 16px 30px;
+    border: 1px solid #d9d2c9;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: all 0.4s ease;
+  }
+
+  .btn-primary-odie:hover {
+    color: #fff;
+    background-color: #272727;
+    border: 1px solid #272727;
+  }
+
+  .btn-primary-odie:focus {
+    color: #fff;
+    background-color: #272727;
+    border: 1px solid #272727;
+  }
+
+  .btn-secondary-odie {
+    display: inline-block;
+    color: #272727;
+    background-color: rgba(255, 255, 255, .6);
+    font-size: 16px;
+    padding: 16px 30px;
+    border: 1px solid #d9d2c9;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: all 0.4s ease;
+  }
+
+  .btn-secondary-odie:hover {
+    color: #fff;
+    background-color: #d18808;
+    border: 1px solid #d18808;
+  }
+
+  .btn-secondary-odie:focus {
+    color: #fff;
+    background-color: #272727;
+    border: 1px solid #272727;
+  }
+
+  .btn-xs-odie {
+    font-size: 14px !important;
+    padding: 12px 10px !important;
+  }
+
+  .btn-sm-odie {
+    font-size: 15px !important;
+    padding: 12px 20px !important;
+  }
+
+  .btn-md-odie {
+    font-size: 18px !important;
+    padding: 16px 50px !important;
+  }
+
+  .btn-lg-odie {
+    font-size: 22px !important;
+    padding: 21px 58px !important;
+  }
+
+  .btn-disabled {
+    opacity: 0.5 !important;
+    pointer-events: none;
+  }
+
+  .btn-full-block {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 700;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .btn-extra-large {
+    font-size: 24px;
+    color: #272727;
+    font-weight: 700;
+    padding: 20px 60px;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+
+  .btn-extra-large:hover {
+    text-decoration: none;
+  }
+
+  .custom-radio-btn {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .custom-radio-btn input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  label.custom-radio-btn {
+    font-size: 16px;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    height: 26px;
+    width: 26px;
+    background-color: #fff;
+    border: 1px solid #b9b9b9 3;
+    border-radius: 50%;
+  }
+
+  .custom-radio-btn:hover input~.checkmark {
+    background-color: #ccc;
+  }
+
+  .custom-radio-btn input:checked~.checkmark {
+    background-color: #fff;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .custom-radio-btn input:checked~.checkmark:after {
+    display: block;
+  }
+
+  .custom-radio-btn .checkmark:after {
+    top: 5px;
+    left: 5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #d18808;
+  }
+
+  @media screen and (max-width: 576px) {
+    .btn-full-block {
+      font-size: 30px;
+      padding: 15px;
+    }
+
+
+
+  }
+
+  @media screen and (max-width: 320px) {
+    .btn-full-block {
+      font-size: 15px;
+      padding: 15px;
+    }
+
+    .btn-extra-large {
+      padding: 13px 15px;
+    }
+
+    .btn-md-odie {
+      font-size: 13px !important;
+      padding: 12px 15px !important;
+    }
+
+    .add-signature-btns {
+      text-align: center;
+    }
+  }
+
+  .grey {
+    filter: grayscale(1);
+  }
+
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
