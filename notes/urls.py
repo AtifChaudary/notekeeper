@@ -7,5 +7,5 @@ urlpatterns = [
     path('register/', register, name="register"),
     path('logout/', logout, name="logout"),
     path('dashboard/', dashboard, name="dashboard"),
-    path('notes/<str:functionality>/', notes),
+    path('notes/<str:functionality>/', notes, name="notes"),
 ]

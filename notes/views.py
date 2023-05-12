@@ -103,6 +103,7 @@ def notes(request, functionality):
         content = request.POST.get('content')
         note_obj = Note.objects.create(title=title, content=content, user=request.user)
         note_obj.save()
+        
         messages.success(request, 'Note Added')
         return redirect('/dashboard/')
     elif functionality.startswith('edit'):
