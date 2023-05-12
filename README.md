@@ -9,7 +9,7 @@
 To install virtualenv via pip run:
 
 ```bash
-$ pip3 install virtualenv
+pip3 install virtualenv
 ```
 
 ##### Usage
