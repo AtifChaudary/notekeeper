@@ -1,19 +1,28 @@
+# Use the official Python base image
 FROM python:3.9
 
-ENV DockerHOME=/home/app/webapp  
-RUN mkdir -p $DockerHOME
-WORKDIR $DockerHOME
-
+# Set environment variables
+ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1  
 
-RUN pip install --upgrade pip  
-COPY . $DockerHOME
+# Set the working directory in the container
+WORKDIR /app
 
+# Copy the requirements.txt file and install dependencies
+COPY requirements.txt .
+
+# Install the dependencies
 RUN pip install -r requirements.txt
+
+# Copy the Django project code into the container
+COPY . .
+
+# Expose port 8000
 EXPOSE 8000
 
-CMD python manage.py makemigrations
-CMD python manage.py migrate
+
+# Run the Tests
 CMD python manage.py test
-CMD python manage.py runserver
+
+# Run the Django development server
+CMD python manage.py runserver 0.0.0.0:8000

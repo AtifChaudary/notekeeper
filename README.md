@@ -50,11 +50,11 @@ python manage.py test
 Build:
 
 ```bash
-docker build . -t docker-django-v0.1
+docker-compse build
 ```
     
 Run:
  
  ```bash
-docker run docker-django-v0.1 
+docker-compose up
 ```
