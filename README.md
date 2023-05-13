@@ -47,14 +47,6 @@ python manage.py test
 
 ## - Docker
 
-Build:
-
-```bash
-docker-compse build
-```
-    
-Run:
- 
  ```bash
 docker-compose up
 ```
