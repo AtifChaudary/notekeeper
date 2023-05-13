@@ -44,3 +44,10 @@ Run Test Cases:
 ```bash
 python manage.py test
 ```
+
+## - Docker
+
+Build:
+    docker build . -t docker-django-v0.1
+Run: 
+    docker run docker-django-v0.1 
